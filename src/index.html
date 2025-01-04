@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../dist/output.css"/>
+
+    <title>Project Tailwind</title>
+</head>
+<body class="text-primary">
+    <!-- Navbar Start -->
+    <nav class="px-10 py-6 flex justify-between items-center font-display">
+        <a href="#" id="logo" class="flex gap-2 items-center">
+            <img class="object-cover max-w-12 max-h-12" src="./assets/img/logo.png" alt="Logo">
+            <span class="text-lg font-semibold ">s.erzv</span>
+        </a>
+        <div id="nav-menu" class="hidden md:flex gap-12">
+            <a href="#" class="font-medium hover:text-blue-500 relative group">Home
+                <span class="absolute left-1/2 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="font-medium hover:text-blue-500 relative group">Blog
+                <span class="absolute left-1/2 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="font-medium hover:text-blue-500 relative group">Portfolio
+                <span class="absolute left-1/2 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="font-medium hover:text-blue-500 relative group">Resume
+                <span class="absolute left-1/2 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"></span>
+            </a>
+        </div>
+        <button class="hidden md:block md:flex border border-gray-300 px-4 py-2 rounded transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+            <i class="fa-solid fa-message py-1 px-2"></i>
+            Get in Touch
+        </button>
+        <button class="p-2 md:hidden" onclick="menuOnMobile()">
+            <i class="fa-solid fa-bars text-[#060932]"></i>
+        </button>
+
+        <div  id="nav-mobile" class="fixed bg-white z-10 inset-0 p-3 md:hidden">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="logo" class="flex gap-2 items-center">
+                    <img class="object-cover max-w-12 max-h-12" src="./img/logo.png" alt="Logo">
+                    <span class="text-lg font-semibold ">s.erzv</span>
+                </a>
+                <button class="md:hidden" onclick="menuOnMobile()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="nav-menu" class="mt-6">
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-md">Home</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-md">Blog</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-md">Portfolio</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-md">Resume</a>
+            </div>
+            <div class="h-[1px] bg-gray-200">
+                <button class="w-full px-4 py-4 hover:bg-gray-50 items-start flex">
+                    <i class="fa-solid fa-message py-1 px-2"></i>
+                    Get in Touch
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Main Start -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen bg-gradient-to-b from-white to-[#c4e3ff] font-display">
+            <div id="nav-container" class="flex p-10">
+                <div id="hero-desc" class="items-center grid p-2">
+                    <h1 class="font-bold text-8xl bg-clip-text bg-gradient-to-r from-[#2f39c6] to-[#aad3f8] text-transparent transition-colors duration-1000 ease-in-out"> <span>Personal Portfolio by </span>
+                        <span id="name-changer">Nupers</span>
+                    </h1>
+                    <p class="mt-[-4rem] text-xl">Your go-to place for everything tech, creativity, and innovation. Check out my portfolio and view my resume to know more about me.</p>
+                    <div id="social-media" class="mt-[-5rem] text-xl flex items-center">
+                        <a href="https://instagram.com/s.erzv"><i class="fa-brands fa-instagram p-3 bg-[#aad3f8] hover:bg-gradient-to-b from-[#7f9dff] to-[#aad3f8] rounded-full m-2 transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/serzv"><i class="fa-brands fa-linkedin p-3 bg-[#aad3f8] hover:bg-gradient-to-b from-[#7f9dff] to-[#aad3f8] rounded-full m-2 transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-lg"></i></a>
+                        <a href="https://github.com/s-erzv"><i class="fa-brands fa-github p-3 bg-[#aad3f8] hover:bg-gradient-to-b from-[#7f9dff] to-[#aad3f8] rounded-full m-2 transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-lg"></i></a>
+                        <a href="./assets/Sarah's CV.pdf" class="text-sm font-medium p-3 bg-[#aad3f8] hover:bg-gradient-to-b from-[#7f9dff] to-[#aad3f8] rounded m-2 transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-lg">Check Out My Resume <i class="fa-solid fa-arrow-up-right-from-square px-1"></i></a>
+                    </div>
+                </div>
+                <div id="hero-img" class="border border-blue-700 rounded-full m-2">
+                    <img class="w-30 h-30" src="./assets/img/serzv-img.png" alt="" />
+                </div>
+            </div>
+        </section>
+        <!-- About Secion -->
+          <section id="about" class="bg-gradient-to-t from-white to-[#c4e3ff] pt-28 pb-6 text-slate-700 font-display flex">
+          <div class="sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-84 pb-28 px-4 mx-auto">
+              <h1 class="font-display sm:text-6xl mb-8 text-2xl font-bold text-center"
+                  data-aos="fade-up" data-aos-duration="500">About Me</h1>
+              <div class="lg:grid-cols-2 grid gap-12 row-gap-8">
+                  <div id="about-desc" class="flex flex-col justify-center">
+                      <div class="max-w-xl mb-6">
+                          <h2 class="sm:text-4xl sm:leading-none max-w-lg mb-6 text-3xl font-semibold tracking-tight"
+                              data-aos="fade-right" data-aos-duration="500"> Hello! I'm Sarah
+                          </h2>
+                          <p class="md:text-sm text-base text-justify" data-aos="fade-right"
+                              data-aos-duration="500" data-aos-delay="200"> An Information Systems student at UIN Jakarta. I'm passionate about technology because it allows me to explore innovative solutions, deepen my understanding of the digital world, and contribute to society's advancements. 
+                          </p>
+                      </div>
+                      <h2 class="sm:text-4xl sm:leading-none max-w-lg mb-6 text-3xl font-semibold tracking-tight"
+                      data-aos="fade-right" data-aos-duration="500"> Skills</h2>
+                      <div id="ad-skills" class="flex flex-wrap">
+                            <!-- HTML -->
+                            <div id="openModal" onclick="showModal('Programming Language HTML', 'I have good HTML skills, which serve as the foundation of web development. With a solid understanding, I can create well-structured and standards-compliant websites. Additionally, my certificates reinforce my expertise, giving me confidence in developing functional and user-friendly websites.', './assets/img/HTML.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/HTML.png"  class="w-[55px] h-auto" alt="HTML Logo">
+                            </div>
+                            <!-- CSS -->
+                            <div id="openModal" onclick="showModal('Programming Language CSS', 'I have good CSS skills, which are essential for styling and laying out websites. With a solid understanding of CSS, I can create visually appealing, responsive, and well-structured designs. My knowledge of CSS frameworks and best practices, combined with relevant certifications, allows me to confidently build stylish, user-friendly, and adaptable websites.', './assets/img/css.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/css.png"  class="w-[55px] h-auto" alt="CSS Logo">
+                            </div>
+                            <!-- JS -->
+                            <div id="openModal" onclick="showModal('Programming Language JavaScript', 'I have a good understanding of JavaScript, especially in front-end development. I am capable of using JavaScript to create interactive and dynamic websites, enhancing the user experience. In addition to my relevant knowledge, I have taken several courses on JavaScript, covering both front-end and back-end development, as well as general JavaScript concepts. These courses have further strengthened my skills, and with the certifications I hold.', './assets/img/js.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/js.png"  class="w-[55px] h-auto" alt="JS Logo">
+                            </div>
+                            <!-- Python -->
+                            <div id="openModal" onclick="showModal('Programming Language Python', 'I have a basic understanding of Python, especially in data science, where I’ve learned fundamental programming concepts like data types, while statements, methods, classes, functions, and file processing. I’ve also participated in a Python fundamental course, which has strengthened my skills in applying Python for various data-related tasks.', './assets/img/python.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/python.png"  class="w-[55px] h-auto" alt="Python Logo">
+                            </div>
+                            <!-- R -->
+                            <div id="openModal" onclick="showModal('Programming Language R', 'I have a basic understanding of R, particularly in data analysis and visualization. I\'ve learned how to use R\'s powerful libraries like ggplot2 and dplyr to create informative visualizations and analyze datasets effectively. Through various courses and hands-on practice.', './assets/img/R.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/R.png"  class="w-[55px] h-auto" alt="R Logo">
+                            </div>
+                            <!-- C -->
+                            <div id="openModal" onclick="showModal('Programming Language C', 'I have a basic understanding of C programming, which has provided me with a strong foundation in computer science concepts. I\'ve learned essential C concepts such as variables, loops, conditionals, and functions, and have applied them in various small projects. This knowledge gives me the ability to write simple, efficient programs and understand core programming principles.', './assets/img/C.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/C.png"  class="w-[55px] h-auto" alt="C Logo">
+                            </div>
+                            <!-- My SQL -->
+                            <div id="openModal" onclick="showModal('Programming Language MySQL', 'I have a basic understanding of MySQL and have applied it in creating projects using phpMyAdmin through XAMPP and Laragon. I’m familiar with creating and managing databases, writing queries, and performing tasks like inserting, updating, and deleting records. This knowledge allows me to build simple database-driven applications and manage data efficiently.', './assets/img/mysql.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/mysql.png"  class="w-[55px] h-auto" alt="MySQL Logo">
+                            </div>
+                            <!-- Java -->
+                            <div id="openModal" onclick="showModal('Programming Language Java', 'I have a basic understanding of Java, which is widely used in software development for building reliable and scalable applications. I have learned fundamental concepts such as variables, loops, methods, object-oriented programming (OOP), classes, and functions. With Java, I can create simple applications and understand core concepts that are essential for more advanced development. I have also worked on small projects, gaining hands-on experience in applying Java to solve real-world problems.', './assets/img/java.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/java.png"  class="w-[55px] h-auto" alt="Java Logo">
+                            </div>
+                            <!-- PHP -->
+                            <div id="openModal" onclick="showModal('Programming Language PHP', 'I have a basic understanding of PHP and have used it in several projects to create dynamic websites. I am comfortable with concepts like handling form data, working with databases, and integrating PHP with HTML. With this knowledge, I can develop basic web applications and handle server-side tasks efficiently.', './assets/img/php.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/php.png"  class="w-[55px] h-auto" alt="HTML Logo">
+                            </div>
+                            <!-- Laravel -->
+                            <div id="openModal" onclick="showModal('PHP Framework', 'I have basic experience with Laravel, a popular PHP framework, and have used it to build web applications. Laravel provides a clean and elegant syntax, which makes developing complex web systems more manageable. I have learned how to work with routes, controllers, views, migrations, and models in Laravel to build scalable applications.', './assets/img/laravel.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/laravel.png"  class="w-[55px] h-auto" alt="Laravel Logo">
+                            </div>
+                            <!-- Tailwind -->
+                            <div id="openModal" onclick="showModal('CSS Framework Tailwind', 'I have a good understanding of Tailwind CSS, which is a utility-first CSS framework that allows for fast and efficient web design. I can use Tailwind to create responsive, clean, and customizable designs with minimal effort. By applying utility classes directly in HTML, I can quickly style elements without writing custom CSS. I’ve worked on several projects using Tailwind, which has helped me develop a strong grasp of creating modern, responsive web interfaces efficiently. My portfolio website is built using Tailwind CSS, which helped me create a clean, responsive, and modern design. By utilizing Tailwind’s utility-first approach, I was able to efficiently style the website without writing extensive custom CSS. This allowed me to focus on creating a user-friendly interface and ensuring the design is adaptable across different screen sizes. Tailwind’s flexibility and ease of use played a key role in bringing my portfolio to life with a polished, professional look.', './assets/img/tailwind.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/tailwind.png"  class="w-[55px] h-auto" alt="Tailwind Logo">
+                            </div>
+                            <!-- Github -->
+                            <div id="openModal" onclick="showModal('Github and Git', 'I have experience using Git and GitHub to manage project versions and collaborate with other developers. Git allows me to track changes, manage branches, and revert to previous versions when necessary, ensuring the code stays organized and consistent. GitHub serves as a remote repository where I can push my code, share it with collaborators, and maintain a well-documented history of my projects. This version control system is crucial for efficient teamwork and ensuring code integrity throughout development. Additionally, my portfolio and other projects are stored and versioned on GitHub, showcasing my ability to manage and organize codebases.', './assets/img/git.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/github.png"  class="w-[55px] h-auto" alt="github Logo">
+                            </div>
+                            <!-- Wordpress -->
+                            <div id="openModal" onclick="showModal('Wordpress', 'I have experience working with WordPress, especially in building and managing websites. At Yayasan Al-Hadiid, I was involved in developing and maintaining the foundation\'s website using WordPress. This gave me hands-on experience with the platform\'s features, themes, and plugins, allowing me to create a functional and user-friendly site for the organization. Additionally, I have worked on several WordPress projects, where I applied my knowledge to customize themes, install plugins, and optimize performance. WordPress has been a valuable tool in my web development journey, as it allows me to deliver dynamic websites with ease.', './assets/img/wordpress.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/wordpress.png"  class="w-[55px] h-auto" alt="Wp Logo">
+                            </div>
+                            <!-- Figma -->
+                            <div id="openModal" onclick="showModal('Figma', 'I have experience using Figma, a design tool that I have become familiar with through my participation in a UI/UX course. During the course, I learned the fundamentals of UI/UX design and how to create user-friendly interfaces. Figma has been a valuable tool for designing wireframes, prototypes, and user interfaces, helping me bring my design ideas to life. My interest in UI/UX continues to grow as I develop my skills in crafting intuitive and aesthetically pleasing user experiences.', './assets/img/figma.png')" 
+                                class="w-14 h-14 p-3 bg-blue-300 hover:border hover:border-blue-400 hover:bg-transparent rounded-full m-2 transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
+                                <img src="./assets/img/figma.png"  class="w-[55px] h-auto" alt="Figma Logo">
+                            </div>
+                            <a href="#" class="text-sm font-medium p-3 bg-white border border-blue-300 rounded mt-6 transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-lg">View Certificates <i class="fa-solid fa-arrow-up-right-from-square px-1"></i></a>
+                      </div>
+                  </div>
+                  <div id="about-img" class="lg:w-full dark:border-cyan-300 relative mx-auto border border-blue-700 rounded-full">
+                      <img class="lg:w-full object-cover" src="./assets/img/serzv-img.png" alt=""
+                          data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" />
+                  </div>
+              </div>
+          </div>
+          <!-- Modal skills -->
+          <div id="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+              <div class="bg-white p-12 rounded-lg w-3/4 shadow-lg relative">
+                <button onclick="closeModal()" class="absolute top-2 right-2"><i class="fa-solid fa-xmark"></i></button>
+                <img id="modalImage" src="" alt="" class="w-[100px] h-auto rounded-md mb-4">
+                <h2 id="modalTitle" class="text-xl font-semibold mb-4">Modal Title</h2>
+                <p id="modalContent" class="mb-4 text-justify text-sm">This is modal content.</p>
+             </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Main End -->
+</body>
+<script src="./main.js"></script>
+</html>
