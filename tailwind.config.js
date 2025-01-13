@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -21,6 +22,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
 
